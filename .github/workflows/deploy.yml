@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: '3.11'
 
@@ -28,4 +28,3 @@ jobs:
           python main.py
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-          
