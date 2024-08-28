@@ -28,10 +28,3 @@ jobs:
           python main.py
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-
-- name: Print Python Version
-  run: python --version
-
-- name: List Installed Packages
-  run: pip list
-
