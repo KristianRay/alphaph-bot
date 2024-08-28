@@ -118,5 +118,3 @@ if __name__ == '__main__':
     t.start()
     # Start the bot
     bot.run(BOT_TOKEN)
-    print(f"BOT_TOKEN: {BOT_TOKEN}")
-
