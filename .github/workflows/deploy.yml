@@ -27,5 +27,5 @@ jobs:
         run: |
           python main.py
         env:
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}a
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           
