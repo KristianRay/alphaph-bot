@@ -12,6 +12,13 @@ import threading
 # Load environment variables from .env file
 load_dotenv()
 
+# Retrieve the environment variable 'BOT_TOKEN'
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+
+# Check if the environment variable is available
+if BOT_TOKEN is None:
+    raise ValueError("No BOT_TOKEN found in environment variables")
+
 # Bot setup
 intents = discord.Intents.default()
 intents.message_content = True
@@ -103,11 +110,13 @@ def home():
     return 'Bot is running!'
 
 def run_flask():
-    app.run(host='0.0.0.0', port=80)
+    app.run(host='0.0.0.0', port=5000)
 
 if __name__ == '__main__':
     # Run Flask in a separate thread
     t = threading.Thread(target=run_flask)
     t.start()
     # Start the bot
-    bot.run(os.getenv('BOT_TOKEN'))
+    bot.run(BOT_TOKEN)
+    print(f"BOT_TOKEN: {BOT_TOKEN}")
+

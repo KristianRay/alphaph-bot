@@ -1,0 +1,6 @@
+{
+    "name": "Python 3",
+    "dockerFile": "Dockerfile",
+    "postCreateCommand": "pip install --upgrade pip setuptools && pip install -r requirements.txt"
+  }
+  
